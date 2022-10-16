@@ -1,0 +1,4 @@
+.mypy_cache/
+*.usd
+*.usdc
+*.usdz

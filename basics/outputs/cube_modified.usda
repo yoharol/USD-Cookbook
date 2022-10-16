@@ -1,0 +1,20 @@
+#usda 1.0
+(
+    defaultPrim = "basic"
+)
+
+def Xform "basic"
+{
+    double3 xformOp:translate = (1, 1, 1)
+    uniform token[] xformOpOrder = ["xformOp:translate"]
+
+    def Cube "cube"
+    {
+        float3[] extent = [(-0.5, -0.5, -0.5), (0.5, 0.5, 0.5)]
+        color3f[] primvars:displayColor = [(0, 1, 1)]
+        double size = 1
+        float3 xformOp:scale = (0.5, 0.5, 0.5)
+        uniform token[] xformOpOrder = ["xformOp:scale"]
+    }
+}
+

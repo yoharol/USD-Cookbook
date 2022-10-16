@@ -1,0 +1,28 @@
+#usda 1.0
+(
+    endTimeCode = 240
+    startTimeCode = 1
+    timeCodesPerSecond = 60
+    upAxis = "Z"
+)
+
+def Xform "base"
+{
+    def Xform "left"
+    {
+    }
+
+    def Xform "middle"
+    {
+    }
+
+    def Xform "right"
+    {
+    }
+}
+
+def Cube "base_cube"
+{
+    token visibility = "invisible"
+}
+
