@@ -1,0 +1,28 @@
+#usda 1.0
+
+def Xform "root"
+{
+    def Cube "cube1"
+    {
+        color3f[] primvars:displayColor = [(0.8, 0, 0)]
+        float3 xformOp:scale = (0.5, 0.5, 0.5)
+        double3 xformOp:translate = (1, 0, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+    }
+
+    def Cube "cube2" (
+        prepend references = </root/cube1>
+    )
+    {
+        color3f[] primvars:displayColor = [(0, 0.8, 0)]
+        double3 xformOp:translate = (3, 0, 1)
+    }
+
+    def Cube "cube3" (
+        prepend references = @./cube.usda@</basic/cube>
+    )
+    {
+        color3f[] primvars:displayColor = [(0, 0, 0.8)]
+    }
+}
+
